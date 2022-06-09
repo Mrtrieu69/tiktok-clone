@@ -1,5 +1,7 @@
+import config from '~/config';
+
 // Layout
-import { HeaderOnly, DefaultLayout } from '~/components/Layout';
+import { HeaderOnly, DefaultLayout } from '~/layouts';
 
 // Pages
 import Home from '~/pages/Home';
@@ -9,10 +11,10 @@ import Upload from '~/pages/Upload';
 
 // Public routes
 const publicRoutes = [
-    { path: '/', component: Home, layout: DefaultLayout },
-    { path: '/following', component: Following, layout: DefaultLayout },
-    { path: '/profile', component: Profile, layout: null },
-    { path: '/upload', component: Upload, layout: HeaderOnly },
+    { path: config.routes.home, component: Home, layout: DefaultLayout },
+    { path: config.routes.following, component: Following, layout: DefaultLayout },
+    { path: config.routes.profile, component: Profile, layout: HeaderOnly },
+    { path: config.routes.upload, component: Upload, layout: HeaderOnly },
 ];
 
 const privateRoutes = [];
