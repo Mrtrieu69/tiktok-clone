@@ -15,12 +15,12 @@ const cx = classNames.bind(styles);
 const Search = () => {
     const [searchValue, setSearchValue] = useState('');
     const [searchResult, setSearchResult] = useState([]);
-    const [showResult, setShowResult] = useState(true);
+    const [showResult, setShowResult] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const inputRef = useRef();
 
-    const debounced = useDebounced(searchValue, 500);
+    const debouncedValue = useDebounced(searchValue, 500);
 
     const handleClear = () => {
         setSearchValue('');
@@ -39,7 +39,7 @@ const Search = () => {
     };
 
     useEffect(() => {
-        if (!debounced) {
+        if (!debouncedValue) {
             setSearchResult([]);
             return;
         }
@@ -47,14 +47,14 @@ const Search = () => {
 
         const fetchApi = async () => {
             setLoading(true);
-            const result = await searchServices(debounced);
+            const result = await searchServices(debouncedValue);
             setSearchResult(result);
 
             setLoading(false);
         };
 
         fetchApi();
-    }, [debounced]);
+    }, [debouncedValue]);
 
     return (
         // Using a wrapper <div> tag around the reference element solves this by creating a new parentNode context.

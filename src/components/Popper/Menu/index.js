@@ -33,6 +33,10 @@ const Menu = ({ children, items = [], onChange = () => {} }) => {
         });
     };
 
+    const handleResetMenu = () => {
+        setHistory((prev) => prev.slice(0, 1));
+    };
+
     return (
         <Tippy
             interactive
@@ -40,7 +44,7 @@ const Menu = ({ children, items = [], onChange = () => {} }) => {
             hideOnClick={false}
             offset={[16, 8]}
             placement="bottom-end"
-            onHide={() => setHistory((prev) => prev.slice(0, 1))}
+            onHide={handleResetMenu}
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
                     <PopperWrapper>
