@@ -1,0 +1,118 @@
+.wrapper {
+    padding: 16px 0;
+    border-top: 1px solid #f1f1f2;
+}
+
+.label {
+    font-size: 1.4rem;
+    padding: 0 8px;
+    color: rgba(22, 24, 35, 0.75);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.account-item {
+    display: flex;
+    cursor: pointer;
+    padding: 8px;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.nickname {
+    font-size: 1.6rem;
+    line-height: 1;
+    color: rgb(22, 24, 35);
+}
+
+.name {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: rgba(22, 24, 35, 0.75);
+}
+
+.check {
+    margin-left: 6px;
+    display: inline-block;
+    color: #20d5ec;
+}
+
+.see-all {
+    color: rgb(254, 44, 85);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 8px;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.card {
+    width: 320px;
+    padding: 12px 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.preview-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.follow {
+    padding: 6px 8px;
+}
+
+.preview-name {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    color: rgb(22, 24, 35);
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.analytics {
+    margin-top: 8px;
+}
+
+.value {
+    font-weight: 700;
+    margin-right: 6px;
+    font-size: 17px;
+    line-height: 20px;
+    display: inline-block;
+}
+
+.preview-label {
+    color: rgba(22, 24, 35, 0.75);
+    font-size: 17px;
+    line-height: 20px;
+    display: inline-block;
+
+    &:not(:last-child) {
+        margin-right: 12px;
+    }
+}
